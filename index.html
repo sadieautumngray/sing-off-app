@@ -5,14 +5,14 @@
 <title>Sing Off — Functional</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#dcd6e5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#261d39}
-.phone{max-width:430px;min-height:100vh;margin:auto;background:linear-gradient(#fffaff,#f5f0ff);position:relative;overflow:hidden}.status{height:32px;padding:9px 19px 0;display:flex;justify-content:space-between;font-size:12px;font-weight:800}.screen{padding:18px 20px 100px}.hero{height:330px;margin:-18px -20px 20px;padding:30px 24px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:linear-gradient(160deg,#32225f,#7a43a9 55%,#ff9bc5);position:relative}.stars{position:absolute;top:45px;font-size:25px;letter-spacing:15px}.brand{font-size:53px;line-height:.82;font-weight:1000;letter-spacing:-4px}.tag{margin:14px 0 22px;font-weight:700}.btn{width:100%;border:0;border-radius:20px;padding:16px;background:linear-gradient(90deg,#7955ff,#b16bff);color:#fff;font-size:17px;font-weight:900;cursor:pointer}.aud{background:#fff;color:#6c42df;font-size:21px;box-shadow:0 12px 30px #30104b33}.menu{background:#fff;border:1px solid #eee8f6;border-radius:19px;padding:16px;margin:11px 0;display:flex;justify-content:space-between;box-shadow:0 5px 18px #563b8010;font-weight:800}.menu small{display:block;color:#786f8b;margin-top:4px}.row{display:flex;gap:12px;align-items:center}.icon{font-size:23px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.back{border:0;background:#eee8ff;border-radius:13px;padding:8px 13px;font-size:20px}.title{font-weight:900;font-size:20px}.judge{background:#fff;border-radius:22px;padding:15px;margin:12px 0;display:flex;gap:13px;align-items:center;box-shadow:0 7px 22px #51347812;border:1px solid #eee8f6}.face{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:36px;animation:bob 1.6s infinite ease-in-out}.p{background:#ffd8e9}.b{background:#dce8ff}.l{background:#e9dcff}@keyframes bob{50%{transform:translateY(-5px) rotate(2deg)}}.judge p{margin:4px 0 0;color:#786f8b;font-size:13px;line-height:1.35}.record{background:#171126;color:#fff;border-radius:27px;min-height:480px;padding:28px 20px;text-align:center;display:flex;flex-direction:column;justify-content:center}.mic{width:145px;height:145px;margin:20px auto;border-radius:50%;display:grid;place-items:center;font-size:62px;border:5px solid #a66cff;box-shadow:0 0 0 12px #a66cff22,0 0 45px #d66cff66;animation:pulse 1.2s infinite}.recording .mic{border-color:#ff6f9f}@keyframes pulse{50%{transform:scale(1.05)}}.timer{font-size:42px;font-weight:1000}.wave{height:40px;display:flex;justify-content:center;align-items:center;gap:4px}.wave i{width:4px;height:10px;background:#ad84ff;border-radius:4px}.recording .wave i{animation:w .65s infinite alternate}.wave i:nth-child(2n){animation-delay:.1s}.wave i:nth-child(3n){animation-delay:.2s}@keyframes w{to{height:35px}}audio{width:100%;margin:15px 0}.result{border-radius:25px;padding:25px;text-align:center;background:linear-gradient(135deg,#68359e,#2eb889);color:#fff}.decision{font-size:50px;font-weight:1000}.score{font-size:25px;font-weight:900}.rj,.tip{background:#fff;color:#261d39;border-radius:17px;padding:14px;margin:9px 0;border:1px solid #eee8f6;text-align:left}.rj{display:flex;justify-content:space-between}.badge{border-radius:10px;padding:5px 8px;font-size:12px;font-weight:900;height:max-content}.yes{background:#d9f7e9;color:#188459}.no{background:#ffe0e8;color:#c63c64}.tip b{display:block}.tip span{font-size:13px;color:#786f8b}.hidden{display:none}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);max-width:430px;width:100%;height:78px;background:#fff;border-top:1px solid #eee8f6;display:flex;justify-content:space-around;align-items:center;z-index:5}.nav button{border:0;background:none;color:#80778e;font-size:11px;font-weight:800}.nav .center{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#7651ff,#bd72ff);color:#fff;font-size:24px}
+.phone{max-width:430px;min-height:100vh;margin:auto;background:linear-gradient(#fffaff,#f5f0ff);position:relative;overflow:hidden}.status{height:32px;padding:9px 19px 0;display:flex;justify-content:space-between;font-size:14px;font-weight:700;color:#261d39}.screen{display:block;padding:16px 16px 88px}.screen.hidden{display:none}.hero{padding:18px 14px 10px;text-align:center}.stars{font-size:18px;letter-spacing:2px;color:#c7aae6;margin-bottom:8px}.brand{font-size:42px;line-height:.9;font-weight:1000;letter-spacing:-3px}.tag{font-size:12px;font-weight:800;letter-spacing:.18em;color:#6f5c8f;margin-top:12px}.btn{border:0;border-radius:18px;padding:15px 18px;background:linear-gradient(#7f6ae9,#6353d6);color:#fff;font-size:18px;font-weight:800;box-shadow:0 12px 28px rgba(91,74,196,.25);width:100%;margin-top:12px}.btn.aud{margin-top:20px}.menu{display:flex;align-items:center;justify-content:space-between;background:#f5f0ff;border-radius:18px;padding:14px 16px;margin:10px 4px;box-shadow:0 8px 20px rgba(109,96,146,.08)}.menu .row{display:flex;align-items:center;gap:12px;flex:1}.icon{width:40px;height:40px;border-radius:12px;background:#efe6ff;display:grid;place-items:center;font-size:22px}.menu small{display:block;color:#786f8b;font-size:12px}.top{display:flex;align-items:center;justify-content:space-between;padding:8px 2px 18px}.back{border:0;background:transparent;font-size:38px;color:#261d39;line-height:1;padding:0}.title{font-weight:900;font-size:22px}.judge{display:flex;gap:14px;align-items:flex-start;padding:12px 8px;border-bottom:1px solid rgba(109,96,146,.12)}.judge:last-of-type{border-bottom:0}.judge p{margin:8px 0 0;color:#786f8b;font-size:14px}.face{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:30px}.face.p{background:linear-gradient(#ffdce9,#f5d8ff)}.face.b{background:linear-gradient(#e2f4ff,#cce8ff)}.face.l{background:linear-gradient(#ffe8de,#f7d9ff)}.record{margin-top:12px;background:#f8f4ff;border:2px solid #e7dff7;border-radius:28px;padding:18px 18px 14px;text-align:center;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}.recording{box-shadow:0 0 0 3px rgba(116,216,167,.3),inset 0 0 0 1px rgba(255,255,255,.7)}.mic{font-size:54px;animation:float 1.6s ease-in-out infinite}.timer{font-size:28px;font-weight:900;letter-spacing:1px;color:#3d2d5b}.wave{display:flex;align-items:flex-end;justify-content:center;gap:4px;height:42px;width:160px}.wave i{display:block;width:5px;border-radius:99px;background:linear-gradient(#7f6ae9,#3bcd9d);height:10px;animation:wave 1s ease-in-out infinite}.wave i:nth-child(odd){animation-delay:.16s}.wave i:nth-child(3n){animation-delay:.32s}@keyframes wave{0%,100%{height:7px}50%{height:28px}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.result{background:linear-gradient(180deg,#fff,#f5f0ff);border-radius:22px;padding:18px 16px;text-align:center;box-shadow:0 10px 20px rgba(109,96,146,.08)}.decision{font-size:32px;font-weight:1000;color:#24a66f;margin-top:8px}.score{font-size:20px;font-weight:900;color:#261d39;margin-top:4px}.rj{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#f7f2ff;border-radius:18px;padding:12px 14px;margin-top:12px;box-shadow:0 10px 20px rgba(109,96,146,.05)}.badge{padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900}.badge.yes{background:#dff8ea;color:#1d8a57}.badge.no{background:#fde8ee;color:#b43a62}.tip{background:#f5f0ff;border-radius:16px;padding:12px 14px;margin-top:10px}.tip b{display:block;margin-bottom:4px}.tip span{font-size:13px;color:#786f8b;line-height:1.5}audio{width:100%;margin:12px 0}.nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(430px,100%);background:rgba(255,255,255,.9);backdrop-filter:blur(10px);display:grid;grid-template-columns:1fr 1fr 72px 1fr 1fr;align-items:center;justify-items:center;padding:12px 16px 18px;border-top:1px solid rgba(109,96,146,.1)}.nav button{border:0;background:transparent;font-size:22px;line-height:1.1;padding:0;color:#261d39}.nav button b{display:block;font-size:12px}.nav .center{width:60px;height:60px;border-radius:50%;background:linear-gradient(#7f6ae9,#6353d6);color:#fff;font-size:32px;box-shadow:0 18px 28px rgba(91,74,196,.35);margin-top:-26px}.hidden{display:none!important}
 </style>
 </head>
 <body><div class="phone">
 <div class="status"><span>9:41</span><span>● ● ▰</span></div>
 
 <section id="home" class="screen">
-<div class="hero"><div class="stars">✦ ✧</div><div class="brand">SING<br>OFF 🎤</div><div class="tag">THREE JUDGES. ONE DREAM. ♡</div><button class="btn aud" onclick="show('judges')">🎤 &nbsp; AUDITION</button></div>
+<div class="hero"><div class="stars">✦ ✧</div><div class="brand">SING<br>OFF 🎤</div><div class="tag">THREE JUDGES. ONE DREAM. ♡</div><button class="btn aud" onclick="show('judges')">🎤 &nbsp;Start Audition</button></div>
 <div class="menu"><div class="row"><span class="icon">🏆</span><div>My Results<small>Your latest audition</small></div></div>›</div>
 <div class="menu"><div class="row"><span class="icon">📈</span><div>Progress<small>Your singing journey</small></div></div>›</div>
 </section>
@@ -25,8 +25,8 @@
 <button class="btn" onclick="begin()">Let's Go! 🎤</button></section>
 
 <section id="recordScreen" class="screen hidden"><div class="top"><button class="back" onclick="cancelRec()">×</button><div class="title">Recording</div><span></span></div>
-<div id="recordBox" class="record"><div style="color:#c9bde1">SING YOUR HEART OUT!</div><div class="mic">🎙️</div><div id="timer" class="timer">00:00</div><div class="wave" id="wave"></div><p id="msg">Press Let’s Go to start your audition.</p>
-<button id="micPermission" class="btn" style="background:#24a66f;margin-bottom:10px" onclick="requestMic()">🎙️ Allow Microphone</button><button id="stop" class="btn" style="background:#24a66f" onclick="startRec()">🎙️ Start Recording</button></div></section>
+<div id="recordBox" class="record"><div style="color:#c9bde1">SING YOUR HEART OUT!</div><div class="mic">🎙️</div><div id="timer" class="timer">00:00</div><div class="wave" id="wave"></div><p id="msg" style="margin:0;color:#786f8b;max-width:220px">Press Start Recording when you are ready!</p></div>
+<button id="micPermission" class="btn" style="background:#24a66f;margin-bottom:10px" onclick="requestMic()">🎙️ Allow Microphone</button><button id="stop" class="btn" style="background:#24a66f" onclick="startRec()">🎙️ Start Recording</button></section>
 
 <section id="results" class="screen hidden"><div class="top"><button class="back" onclick="show('home')">‹</button><div class="title">Your Results</div>✨</div>
 <div class="result"><div>👑 OVERALL RESULT</div><div id="decision" class="decision"></div><div id="score" class="score"></div></div>
@@ -50,8 +50,7 @@
   </div>
 </div>
 
-<div class="nav"><button onclick="show('home')">⌂<br>Home</button><button onclick="show('results')">🏆<br>Results</button><button class="center" onclick="show('judges')">🎤</button><button>▥<br>Progress</button><button onclick="openSettings()">⚙<br>Settings</button></div>
-</div>
+<div class="nav"><button onclick="show('home')">⌂<br>Home</button><button onclick="show('results')">🏆<br>Results</button><button class="center" onclick="show('judges')">🎤</button><button>▥<br>Menu</button><button onclick="openSettings()">⚙️<br>Settings</button></div>
 <script>
 let recorder, chunks=[], stream, audioCtx, analyser, source, raf, timerInt, started, data, sampleRate=44100;
 
@@ -126,29 +125,103 @@ async function startRec(){
   }
 }
 
-function monitor(){data=new Float32Array(analyser.fftSize);analyser.getFloatTimeDomainData(data);raf=requestAnimationFrame(monitor)}
-function stopRec(){clearInterval(timerInt);cancelAnimationFrame(raf);if(recorder&&recorder.state!=="inactive")recorder.stop();if(stream)stream.getTracks().forEach(t=>t.stop());if(audioCtx)audioCtx.close();document.getElementById('msg').textContent='Analyzing your voice...'}
+function monitor(){
+  if(!analyser) return;
+  data=new Float32Array(analyser.fftSize);
+  analyser.getFloatTimeDomainData(data);
+  const wave=document.getElementById('wave');
+  if(wave){
+    const bars=[...wave.children];
+    const level=data.reduce((sum,v)=>sum+Math.abs(v),0)/data.length;
+    bars.forEach((bar,i)=>{
+      const pulse=0.45 + (Math.sin((i/bars.length)*Math.PI*2 + performance.now()/260)*0.5 + 0.5) * 0.85;
+      const height=8 + pulse * (18 + level * 80);
+      bar.style.height=`${Math.max(8,height)}px`;
+      bar.style.opacity=String(Math.min(1,0.5 + level * 20));
+    });
+  }
+  raf=requestAnimationFrame(monitor);
+}
+function stopRec(){clearInterval(timerInt);cancelAnimationFrame(raf);if(recorder&&recorder.state!=="inactive")recorder.stop();if(stream)stream.getTracks().forEach(t=>t.stop());if(audioCtx&&audioCtx.state!=="closed")audioCtx.close();}
 function cancelRec(){clearInterval(timerInt);cancelAnimationFrame(raf);if(recorder&&recorder.state!=="inactive")recorder.stop();stream?.getTracks().forEach(t=>t.stop());show('home')}
 
 async function finish(){
  const blob=new Blob(chunks,{type:recorder.mimeType||'audio/webm'});document.getElementById('play').src=URL.createObjectURL(blob);
  const buf=await decode(blob); const metrics=analyze(buf); render(metrics); show('results');
 }
-async function decode(blob){const ac=new (window.AudioContext||window.webkitAudioContext)();const arr=await blob.arrayBuffer();const b=await ac.decodeAudioData(arr);const ch=b.getChannelData(0);ac.close();return {x:ch,sr:b.sampleRate,dur:b.duration}}
+async function decode(blob){
+  const ac=new (window.AudioContext||window.webkitAudioContext)();
+  const arr=await blob.arrayBuffer();
+  const b=await ac.decodeAudioData(arr);
+  const ch=b.getChannelData(0);
+  const out=new Float32Array(ch.length);
+  let peak=0;
+  for(let i=0;i<ch.length;i++){
+    const v=ch[i];
+    out[i]=v;
+    peak=Math.max(peak,Math.abs(v));
+  }
+  const normalized=peak>0.0001?out.map(v=>v/peak):out;
+  ac.close();
+  return {x:normalized,sr:b.sampleRate,dur:b.duration};
+}
+
+function estimatePitch(x,start,len,sr){
+  const minLag=Math.max(2,Math.floor(sr/1000));
+  const maxLag=Math.min(Math.floor(sr/75),Math.floor(len/2));
+  let bestLag=minLag,bestCorr=-1;
+  let energy=0;
+  for(let i=0;i<len;i++)energy+=x[start+i]*x[start+i];
+  if(energy<1e-6)return 0;
+  for(let lag=minLag;lag<=maxLag;lag++){
+    let corr=0,left=0,right=0;
+    for(let i=0;i<len-lag;i++){
+      const a=x[start+i],b=x[start+i+lag];
+      corr+=a*b; left+=a*a; right+=b*b;
+    }
+    const denom=Math.sqrt(left*right)||1;
+    const norm=corr/denom;
+    if(norm>bestCorr){bestCorr=norm;bestLag=lag;}
+  }
+  if(bestCorr<0.14)return 0;
+  return sr/bestLag;
+}
+
 function analyze(a){
- const x=a.x,sr=a.sr; let frame=Math.floor(sr*.04), step=Math.floor(sr*.02), voiced=[], rms=[];
- for(let i=0;i+frame<x.length;i+=step){
-  let sum=0;for(let j=0;j<frame;j++){let v=x[i+j];sum+=v*v}let r=Math.sqrt(sum/frame);rms.push(r);
-  if(r>.018){let f=pitch(x,i,frame,sr);if(f>=75&&f<=1000)voiced.push(f)}
- }
- const med=median(voiced), spread=voiced.length?Math.sqrt(voiced.reduce((s,f)=>s+(f-med)**2,0)/voiced.length):999;
- const active=rms.filter(v=>v>.018).length/(rms.length||1);
- const dynamic=(Math.max(...rms)-Math.min(...rms));
- const pitchScore=clamp(100-spread*1.8,45,98);
- const breathScore=clamp(62+active*35+(dynamic>0.15?5:0),45,98);
- const toneScore=clamp(55+Math.min(35,voiced.length/(rms.length||1)*55),45,95);
- const performanceScore=clamp(58+active*30+(dynamic>0.08?8:0),45,96);
- return {pitchScore,breathScore,toneScore,performanceScore,voiced:voiced.length,dur:a.dur,active,spread};
+  const x=a.x||new Float32Array(0), sr=a.sr||44100;
+  const frame=Math.max(1024,Math.floor(sr*.04));
+  const step=Math.max(256,Math.floor(frame*.5));
+  const rms=[];const pitches=[];
+  for(let i=0;i+frame<=x.length;i+=step){
+    let sum=0,zcr=0;
+    for(let j=0;j<frame;j++){
+      const v=x[i+j];
+      sum+=v*v;
+      if(j>0){
+        const prev=x[i+j-1];
+        if((prev>=0&&v<0)||(prev<0&&v>=0))zcr++;
+      }
+    }
+    const level=Math.sqrt(sum/frame);
+    rms.push(level);
+    if(level>0.006){
+      const f=estimatePitch(x,i,frame,sr);
+      if(f>=75&&f<=1000){
+        pitches.push(f);
+      }
+    }
+  }
+  const safeRms=rms.length?rms:[0];
+  const active=rms.filter(v=>v>0.006).length/(rms.length||1);
+  const voicedRatio = pitches.length / Math.max(1,rms.length);
+  const medianPitch=median(pitches);
+  const spread = pitches.length ? median(pitches.map(f=>Math.abs(f-medianPitch))) * 1.8 : 999;
+  const dynamic=Math.max(...safeRms)-Math.min(...safeRms);
+  const pitchScore=clamp(100-spread*2.1,45,98);
+  const breathScore=clamp(58+active*30+(dynamic>0.1?8:0)+(voicedRatio>0.15?6:0),45,98);
+  const toneScore=clamp(52+voicedRatio*38+(dynamic>0.08?7:0)-(spread>30?10:0),45,96);
+  const performanceScore=clamp(56+active*24+voicedRatio*18+(dynamic>0.06?8:0)-Math.max(0,spread-18)*.5,45,97);
+  return {pitchScore,breathScore,toneScore,performanceScore,voiced:pitches.length,dur:a.dur,active,spread,medianPitch};
 }
 function pitch(x,start,n,sr){
  let minLag=Math.floor(sr/1000),maxLag=Math.floor(sr/75),best=minLag,bestVal=-1;
@@ -167,8 +240,8 @@ function render(m){
   ['🎶 Voice Judge',voice, voice>=75?'YES':'TRY AGAIN', voice>=75?'Your recording shows steady vocal sound and control.':'Work on steady airflow and a relaxed, even tone.'],
   ['❤️ Performance Judge',perf, perf>=75?'YES':'TRY AGAIN', perf>=75?'Your singing had good consistency and energy.':'Try singing with more confidence and expression.']
  ];
- document.getElementById('judgesOut').innerHTML=arr.map(j=>`<div class="rj"><div><b>${j[0]}</b><div style="font-size:12px;color:#786f8b">${j[3]}</div></div><span class="badge ${j[2]=='YES'?'yes':'no'}">${j[2]} · ${j[1]}</span></div>`).join('');
- let tips=[]; if(pitch<80)tips.push(['🎯 Pitch Accuracy','Practice scales with a piano or another reference note.']); if(m.breathScore<80)tips.push(['🌬️ Breath Control','Take a low, relaxed breath and support long phrases without squeezing.']); if(perf<80)tips.push(['❤️ Expression','Choose an emotion for the song and let it come through in your voice.']); if(!tips.length)tips=[['🚀 Keep improving','Try a harder song or aim for an even higher score.'],['🎯 Consistency','Repeat the same section and try to make each phrase equally strong.'],['❤️ Performance','Experiment with dynamics and emotion to make the song yours.']];
+ document.getElementById('judgesOut').innerHTML=arr.map(j=>`<div class="rj"><div><b>${j[0]}</b><div style="font-size:12px;color:#786f8b">${j[3]}</div></div><span class="badge ${j[2]=='YES'?'yes':'no'}">${j[2]}</span></div>`).join('');
+ let tips=[]; if(pitch<80)tips.push(['🎯 Pitch Accuracy','Practice scales with a piano or another reference note.']); if(m.breathScore<80)tips.push(['🌬️ Breath Control','Take a low, relaxed breath and sustain notes evenly.']); if(perf<80)tips.push(['🎭 Performance','Sing with more confident phrasing and stronger emotional expression.']); if(!tips.length)tips.push(['✨ Great work','Your audition is balanced and steady.']);
  document.getElementById('tips').innerHTML=tips.slice(0,3).map(t=>`<div class="tip"><b>${t[0]}</b><span>${t[1]}</span></div>`).join('');
 }
 
