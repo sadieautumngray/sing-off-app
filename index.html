@@ -4,15 +4,41 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sing Off — Functional</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#dff3ff 0%,#e7f9ee 30%,#fdf4d6 62%,#f7eaf3 100%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#261d39}
-.phone{max-width:430px;min-height:100vh;margin:auto;background:linear-gradient(180deg,#fdfdff,#f3fbf8,#fffaf3);position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(126,166,191,.18)}.status{height:32px;padding:9px 19px 0;display:flex;justify-content:space-between;font-size:14px;font-weight:700;color:#5f7a8b}.screen{display:block;padding:16px 16px 88px}.screen.hidden{display:none}.hero{padding:18px 14px 10px;text-align:center;background:linear-gradient(135deg,#d8ecff 0%,#dff9ee 36%,#fdf0c7 68%,#f7dfe9 100%);border-radius:28px;margin:12px;box-shadow:0 18px 35px rgba(149,181,205,.18)}.stars{font-size:18px;letter-spacing:2px;color:#6b98ba;margin-bottom:8px;text-shadow:0 0 10px rgba(217,240,255,.35)}.brand{font-size:42px;line-height:.9;font-weight:1000;letter-spacing:-3px;background:linear-gradient(120deg,#78b7db,#7dc9b8,#f4d783,#e4a9c7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.tag{font-size:12px;font-weight:800;letter-spacing:.16em;color:#7298b1;margin-top:12px}.btn{border:0;border-radius:18px;padding:15px 18px;background:linear-gradient(135deg,#d9f3ff,#d8f0d2,#fdf0b2);color:#234a61;font-size:18px;font-weight:800;box-shadow:0 12px 28px rgba(128,175,196,.25);width:100%;margin-top:12px;transition:all .2s;cursor:pointer}.btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(120,167,187,.32)}.btn:active{transform:translateY(0)}.btn.aud{margin-top:20px;background:linear-gradient(135deg,#d4edff,#d5f3df,#fdf2c2)}.menu{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(230,245,238,.95));border:2px solid rgba(148,190,214,.16);border-radius:18px;padding:14px 16px;margin:10px 4px;box-shadow:0 8px 20px rgba(156,181,203,.08)}.menu .row{display:flex;align-items:center;gap:12px;flex:1;color:#2e2347}.icon{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#d9f2ff,#e7f6eb,#fff0c5);display:grid;place-items:center;font-size:22px;box-shadow:0 8px 18px rgba(93,155,177,.18)}.menu small{display:block;color:#745f7f;font-size:12px}.top{display:flex;align-items:center;justify-content:space-between;padding:8px 2px 18px;color:#2e2347}.back{border:0;background:transparent;font-size:38px;color:#3b6b8a;line-height:1;padding:0;cursor:pointer;transition:all .2s}.back:hover{transform:scale(1.12)}.title{font-weight:900;font-size:22px;color:#2d2245}.judge{display:flex;gap:14px;align-items:flex-start;padding:12px 8px;border-bottom:1px solid rgba(112,146,177,.1);color:#2e2347}.judge:last-of-type{border-bottom:0}.judge p{margin:8px 0 0;color:#685d7d;font-size:14px}.face{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:30px;box-shadow:0 8px 16px rgba(0,0,0,.05)}.face.p{background:linear-gradient(135deg,#fbe7f1,#d9ebff,#fef0bf)}.face.b{background:linear-gradient(135deg,#dff9ee,#dfeaff,#fdf0bf)}.face.l{background:linear-gradient(135deg,#fddbeb,#dff3ff,#f9f0c2)}.record{margin-top:12px;background:linear-gradient(180deg,#f5fbff,#eefcf8,#fff7d6);border:3px solid rgba(90,167,198,.2);border-radius:28px;padding:18px 18px 14px;text-align:center;min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 0 0 1px rgba(112,171,184,.15),0 14px 36px rgba(121,180,202,.15)}.recording{box-shadow:0 0 0 2px rgba(111,172,183,.2),0 14px 36px rgba(118,184,177,.2)}.mic{font-size:54px;animation:float 1.6s ease-in-out infinite}.timer{font-size:28px;font-weight:900;letter-spacing:1px;color:#7a5fab}.wave{display:flex;align-items:flex-end;justify-content:center;gap:4px;height:42px;width:160px}.wave i{display:block;width:5px;border-radius:99px;background:linear-gradient(180deg,#d38ae8,#6ca7d9,#8cdbb0,#f4d783);height:10px;animation:wav 1s ease-in-out infinite;box-shadow:0 0 12px rgba(113,165,170,.18)}.wave i:nth-child(odd){animation-delay:.16s}.wave i:nth-child(3n){animation-delay:.32s}@keyframes wav{0%,100%{height:7px}50%{height:28px}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.result{background:linear-gradient(180deg,#f9feff,#eefaf5,#fff7d6);border:2px solid rgba(129,202,186,.2);border-radius:22px;padding:18px 16px;text-align:center;box-shadow:0 12px 30px rgba(121,165,187,.12)}.decision{font-size:32px;font-weight:1000;background:linear-gradient(120deg,#7abde0,#7cd4b7,#f4d783,#e1a3c6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:8px}.score{font-size:20px;font-weight:900;color:#734ca9;margin-top:4px}.rj{display:flex;justify-content:space-between;gap:12px;align-items:center;background:linear-gradient(135deg,#f9feff,#f0faf9,#fffaf0);border:1px solid rgba(131,177,206,.16);border-radius:18px;padding:12px 14px;margin-top:12px;box-shadow:0 8px 16px rgba(130,164,188,.06)}.rj b{color:#4d3d68}.rj div{color:#241d31;text-align:left}.badge{padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900}.badge.yes{background:linear-gradient(135deg,#a8e5d2,#8cc7f8,#f7d98d);color:#fff}.badge.no{background:linear-gradient(135deg,#f3c0d1,#d9baf8,#f8e5a6);color:#fff}.tip{background:linear-gradient(135deg,#f9fbff,#f0faf6,#fff7de);border:1px solid rgba(135,181,200,.16);border-radius:16px;padding:12px 14px;margin-top:10px}.tip b{display:block;margin-bottom:4px;color:#4d3d68}.tip span{font-size:13px;color:#62547a;line-height:1.5}audio{width:100%;margin:12px 0}.nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(430px,100%);background:rgba(255,255,255,.9);backdrop-filter:blur(10px);display:grid;grid-template-columns:1fr 1fr 72px 1fr 1fr;align-items:center;justify-items:center;padding:12px 16px 18px;border-top:1px solid rgba(140,164,184,.1);box-shadow:0 -15px 30px rgba(121,139,181,.08)}.nav button{border:0;background:transparent;font-size:22px;line-height:1.1;padding:0;color:#62547a}.nav button .center{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#a7d8ff,#8bd7c5,#f4d783);color:#fff;font-size:32px;box-shadow:0 18px 28px rgba(113,172,181,.2);margin-top:-26px}.hidden{display:none!important}
+:root{
+  --bg-1:#f5f0e8;
+  --bg-2:#edf2ee;
+  --bg-3:#f5f0fa;
+  --panel:#fffdfb;
+  --panel-2:#f8f4f1;
+  --card:#f4efe9;
+  --card-2:#eef2f6;
+  --ink:#2e2a3b;
+  --muted:#655e73;
+  --muted-2:#7e758d;
+  --line:rgba(80,65,90,.12);
+  --sage:#dfeee6;
+  --sage-deep:#b8d1bf;
+  --lavender:#e9e1f8;
+  --lavender-deep:#c8b9e7;
+  --rose:#f4e4eb;
+  --rose-deep:#d7b8c5;
+  --peach:#fae9d8;
+  --peach-deep:#e9c4a7;
+  --sky:#e8f1fb;
+  --sky-deep:#bed5ef;
+  --success:#6e8c7a;
+  --warning:#8d7e9b;
+  --shadow:rgba(72,58,94,.12);
+}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,var(--bg-1) 0%,var(--bg-2) 38%,var(--bg-3) 100%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink)}
+body,html{min-height:100%}.phone{max-width:430px;min-height:100vh;margin:auto;background:linear-gradient(180deg,#fffdfc 0%,#f6f9f5 42%,#f9f4f9 100%);position:relative;overflow:hidden;box-shadow:0 20px 60px var(--shadow)}.screen{display:block;min-height:100vh;padding:20px 18px 95px}.screen.hidden{display:none}.status{display:flex;justify-content:space-between;align-items:center;padding:10px 18px 6px;color:var(--muted);font-weight:700;font-size:13px}.status span:last-child{letter-spacing:2px}.hero{padding:18px 10px 12px;text-align:center}.stars{font-size:20px;letter-spacing:4px;color:var(--warning);opacity:.8}.brand{font-weight:900;font-size:44px;line-height:.9;letter-spacing:2px;margin-top:10px;color:#2d2b3a;text-shadow:0 10px 20px rgba(79,73,94,.06)}.tag{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:12px}.btn{border:none;border-radius:18px;padding:14px 20px;font-size:16px;font-weight:800;letter-spacing:.2px;background:linear-gradient(135deg,var(--sage),var(--lavender));color:var(--ink);box-shadow:0 8px 16px rgba(130,110,150,.08);cursor:pointer;transition:transform .18s ease,filter .18s ease}.btn:hover{transform:translateY(-1px);filter:saturate(.96)}.btn.aud{background:linear-gradient(135deg,#dfeee6,#dfe7f8);margin-top:18px;width:100%}.menu{background:rgba(255,255,255,.4);border:1px solid var(--line);border-radius:18px;padding:12px 16px;margin:12px 0;display:flex;justify-content:space-between;align-items:center;box-shadow:0 10px 18px rgba(130,110,150,.04)}.menu .row{display:flex;align-items:center;gap:12px;flex:1}.icon{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--peach),var(--rose));font-size:20px}.menu div{font-weight:800}.menu small{display:block;font-weight:600;color:var(--muted);margin-top:2px}.top{display:flex;align-items:center;justify-content:space-between;padding:4px 4px 16px}.back{width:38px;height:38px;border:none;border-radius:12px;background:var(--panel-2);color:var(--ink);font-size:28px;line-height:1;box-shadow:0 6px 12px rgba(80,65,90,.06)}.title{font-size:18px;font-weight:900;letter-spacing:.4px}.judge{display:flex;align-items:center;gap:14px;padding:14px 12px;background:rgba(255,255,255,.45);border:1px solid var(--line);border-radius:18px;margin:12px 0}.judge p{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.4}.judge b{font-size:15px}.face{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:26px;background:linear-gradient(135deg,#f5dfe6,#e9e1f8)}.face.p{background:linear-gradient(135deg,#f3dfe9,#eadff8)}.face.b{background:linear-gradient(135deg,#dfeee6,#dfe8f8)}.face.l{background:linear-gradient(135deg,#fbe7d4,#f4e7ed)}.record{background:linear-gradient(180deg,#f8f5f2,#f2faf7);border:1px solid var(--line);border-radius:26px;padding:18px 16px 14px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;box-shadow:0 16px 28px rgba(124,122,129,.06)}.record.recording{box-shadow:0 0 0 3px rgba(180,190,220,.18),0 16px 32px rgba(95,89,137,.08)}.mic{font-size:62px;line-height:1;filter:saturate(.9)}.timer{font-size:40px;font-weight:900;letter-spacing:2px;color:var(--ink);margin-top:6px}.wave{display:flex;justify-content:center;gap:4px;height:28px;align-items:flex-end;margin:8px 0 2px}.wave i{display:block;width:5px;border-radius:99px;background:linear-gradient(180deg,var(--lavender-deep),var(--sage-deep));height:8px;animation:wave 1s ease-in-out infinite}.wave i:nth-child(odd){height:16px;animation-delay:.12s}.wave i:nth-child(3n){height:12px}.wave i:nth-child(4n){animation-delay:.22s}.recording .wave i{background:linear-gradient(180deg,var(--peach-deep),var(--rose-deep))}@keyframes wave{0%,100%{transform:scaleY(.6);opacity:.7}50%{transform:scaleY(1);opacity:1}}#msg{font-size:13px;line-height:1.5;color:var(--muted);min-height:40px}.decision{font-size:38px;font-weight:900;letter-spacing:1px;color:#2d2b3a}.score{font-size:28px;font-weight:800;color:var(--muted)}.result{background:linear-gradient(135deg,#f7f1f4,#eef6f2);border:1px solid var(--line);border-radius:22px;padding:18px 16px;margin-bottom:18px;text-align:center}.rj{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.rj:last-child{border-bottom:none}.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap;background:linear-gradient(135deg,var(--rose),var(--lavender));color:var(--ink)}.badge.yes{background:linear-gradient(135deg,var(--sage),var(--sky))}.tip{background:rgba(255,255,255,.38);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:10px 0}.tip b{display:block;margin-bottom:4px;font-size:14px}.tip span{font-size:12px;color:var(--muted);line-height:1.5}.nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(430px,100%);display:grid;grid-template-columns:repeat(4,1fr);padding:10px 16px 18px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.9) 24%,rgba(255,255,255,.98));backdrop-filter:blur(6px)}.nav button{background:transparent;border:none;color:var(--muted);font-size:12px;padding:8px 0;font-weight:800;display:flex;flex-direction:column;align-items:center;gap:4px}.nav .center{background:linear-gradient(135deg,var(--sage),var(--lavender));color:var(--ink);border-radius:18px;width:58px;height:58px;margin:-18px auto 0;font-size:30px;box-shadow:0 10px 18px rgba(138,121,167,.12)}.nav button:not(.center):hover{color:var(--ink)}.hidden{display:none!important}.result audio{width:100%;margin-top:10px;border-radius:12px}.result h3{margin:18px 0 10px;text-align:left;font-size:18px}.#judgesOut{margin-top:14px}.#tips{margin-top:10px}.#settingsModal{position:fixed;inset:0;background:rgba(58,47,66,.18);z-index:20;display:flex;align-items:flex-end;justify-content:center}#settingsModal .hidden{display:none}#settingsModal > div{width:min(430px,100%);background:linear-gradient(180deg,#fffdfb,#f6f4f7);border-radius:28px 28px 0 0;padding:24px 20px 30px;box-shadow:0 -15px 40px rgba(63,52,77,.12)}#settingsModal .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}#settingsModal .header .title{font-size:24px;font-weight:900}#settingsModal .close{border:0;background:linear-gradient(135deg,var(--sage),var(--lavender));border-radius:12px;padding:8px 12px;font-size:18px;font-weight:700}#settingsModal .card{background:linear-gradient(135deg,var(--panel-2),#f1f4fb);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px}#settingsModal .card .label{font-weight:900;font-size:16px}#settingsModal .card .copy{font-size:13px;color:var(--muted);line-height:1.45;margin:6px 0 13px}#settingsModal .btn{width:100%}#settingsMicMsg{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
 </style>
 </head>
 <body><div class="phone">
 <div class="status"><span>9:41</span><span>● ● ▰</span></div>
 
 <section id="home" class="screen">
-<div class="hero"><div class="stars">✦ ✧</div><div class="brand">SING<br>OFF 🎤</div><div class="tag">THREE JUDGES. ONE DREAM. ♡</div><button class="btn aud" onclick="show('judges')">🎤 Start Audition</button></div>
+<div class="hero"><div class="stars">✦ ✧</div><div class="brand">SING<br>OFF 🎤</div><div class="tag">THREE JUDGES. ONE DREAM. ♡</div><button class="btn aud" onclick="show('judges')">🎤 Let’s Audition</button></div>
 <div class="menu"><div class="row"><span class="icon">🏆</span><div>My Results<small>Your latest audition</small></div></div>›</div>
 <div class="menu"><div class="row"><span class="icon">📈</span><div>Progress<small>Your singing journey</small></div></div>›</div>
 </section>
@@ -22,34 +48,34 @@
 <div class="judge"><div class="face p">👩🏻‍🎤</div><div><b>🎵 Pitch Judge</b><p>Checks pitch accuracy and steadiness.</p></div></div>
 <div class="judge"><div class="face b">👨🏽‍🎤</div><div><b>🎶 Voice Judge</b><p>Checks tone, volume and breath control.</p></div></div>
 <div class="judge"><div class="face l">❤️</div><div><b>Performance Judge</b><p>Checks consistency, expression and confidence.</p></div></div>
-<button class="btn" onclick="begin()">Let's Go! 🎤</button></section>
+<button class="btn" onclick="begin()">Let’s Go! 🎤</button></section>
 
 <section id="recordScreen" class="screen hidden"><div class="top"><button class="back" onclick="cancelRec()">×</button><div class="title">Recording</div><span></span></div>
-<div id="recordBox" class="record"><div style="color:#8d7db1">SING YOUR HEART OUT!</div><div class="mic">🎙️</div><div id="timer" class="timer">00:00</div><div class="wave" id="wave"></div><p id="msg" style="margin:0;color:#645a7d;max-width:220px">Press Start Recording when you are ready!</p></div>
-<button id="micPermission" class="btn" style="background:linear-gradient(135deg,#7ed7c0,#9daef7);margin-bottom:10px" onclick="requestMic()">🎙️ Allow Microphone</button><button id="stop" class="btn" style="background:linear-gradient(135deg,#7ed7c0,#9daef7)" onclick="startRec()">🎙️ Start Recording</button></section>
+<div id="recordBox" class="record"><div style="color:#776f8a">SING YOUR HEART OUT!</div><div class="mic">🎙️</div><div id="timer" class="timer">00:00</div><div class="wave" id="wave"></div><p id="msg" style="margin:0">Press Start Recording when you are ready!</p></div>
+<button id="micPermission" class="btn" style="margin-top:12px;background:linear-gradient(135deg,#dfeee6,#dfe7f8);width:100%" onclick="requestMic()">🎙️ Allow Microphone</button><button id="stop" class="btn" style="margin-top:12px;background:linear-gradient(135deg,#dfeee6,#dfe7f8);width:100%" onclick="startRec()">🎙️ Start Recording</button></section>
 
 <section id="results" class="screen hidden"><div class="top"><button class="back" onclick="show('home')">‹</button><div class="title">Your Results</div>✨</div>
 <div class="result"><div>👑 OVERALL RESULT</div><div id="decision" class="decision"></div><div id="score" class="score"></div></div>
-<audio id="play" controls></audio><div id="judgesOut"></div><h3>💡 3 Things To Work On</h3><div id="tips"></div><button class="btn" onclick="begin()">🔄 Try Again</button></section>
+<audio id="play" controls></audio><div id="judgesOut"></div><h3>💡 3 Things To Work On</h3><div id="tips"></div><button class="btn" onclick="begin()" style="margin-top:12px;width:100%">🔄 Try Again</button></section>
 
-<div id="settingsModal" class="hidden" style="position:fixed;inset:0;background:#21172f99;z-index:20;display:flex;align-items:flex-end;justify-content:center;">
-  <div style="width:min(430px,100%);background:#fff;border-radius:28px 28px 0 0;padding:24px 20px 30px;box-shadow:0 -15px 40px #21172f33;">
+<div id="settingsModal" class="hidden" style="position:fixed;inset:0;background:rgba(58,47,66,.18);z-index:20;display:none;align-items:flex-end;justify-content:center;">
+  <div style="width:min(430px,100%);background:linear-gradient(180deg,#fffdfb,#f6f4f7);border-radius:28px 28px 0 0;padding:24px 20px 30px;box-shadow:0 -15px 40px rgba(63,52,77,.12);">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
       <div style="font-size:24px;font-weight:900">⚙️ Settings</div>
-      <button onclick="closeSettings()" style="border:0;background:#eee8ff;border-radius:12px;padding:8px 12px;font-size:18px">×</button>
+      <button onclick="closeSettings()" style="border:0;background:linear-gradient(135deg,#dfeee6,#e9e1f8);border-radius:12px;padding:8px 12px;font-size:18px">×</button>
     </div>
-    <div style="background:#f5f0ff;border-radius:18px;padding:16px;margin-bottom:14px">
+    <div style="background:linear-gradient(135deg,#f6f1f3,#edf2fb);border:1px solid rgba(80,65,90,.12);border-radius:18px;padding:16px;margin-bottom:14px">
       <div style="font-weight:900;font-size:16px">🎙️ Microphone</div>
-      <div style="font-size:13px;color:#786f8b;line-height:1.4;margin:6px 0 13px">
+      <div style="font-size:13px;color:#655e73;line-height:1.4;margin:6px 0 13px">
         Sing Off needs microphone access so the judges can hear your audition.
       </div>
-      <button id="settingsMicBtn" class="btn" style="background:linear-gradient(135deg,#7ed7c0,#9daef7)" onclick="requestMicFromSettings()">🎙️ Allow Microphone</button>
-      <div id="settingsMicMsg" style="font-size:12px;color:#786f8b;text-align:center;margin-top:8px"></div>
+      <button id="settingsMicBtn" class="btn" style="background:linear-gradient(135deg,#dfeee6,#dfe7f8);width:100%" onclick="requestMicFromSettings()">🎙️ Allow Microphone</button>
+      <div id="settingsMicMsg" style="font-size:12px;color:#655e73;text-align:center;margin-top:8px"></div>
     </div>
   </div>
 </div>
 
-<div class="nav"><button onclick="show('home')">⌂<br>Home</button><button onclick="show('results')">🏆<br>Results</button><button class="center" onclick="show('judges')">🎤</button><button>🎶<br>Menu</button><button onclick="openSettings()">⚙️<br>Settings</button></div>
+<div class="nav"><button onclick="show('home')">⌂<br>Home</button><button onclick="show('results')">🏆<br>Results</button><button class="center" onclick="show('judges')">🎤</button><button onclick="openSettings()">⚙️<br>Settings</button></div>
 <script>
 let recorder, chunks=[], stream, audioCtx, analyser, source, raf, timerInt, started, data, sampleRate=44100;
 
@@ -81,7 +107,7 @@ function begin(){
   document.getElementById('msg').textContent='Press Start Recording when you are ready!';
   const btn=document.getElementById('stop');
   btn.textContent='🎙️ Start Recording';
-  btn.style.background='linear-gradient(135deg,#7ed7c0,#9daef7)';
+  btn.style.background='linear-gradient(135deg,#dfeee6,#dfe7f8)';
   btn.onclick=startRec;
 }
 
@@ -105,7 +131,7 @@ async function startRec(){
     recorder.start();
     started=Date.now();
     btn.textContent='⏹ Stop Recording';
-    btn.style.background='linear-gradient(135deg,#f1a7c8,#b58af6,#f4d783)';
+    btn.style.background='linear-gradient(135deg,#f4e2df,#e4d9f7,#f9e9d9)';
     btn.onclick=stopRec;
     document.getElementById('msg').textContent='🎙️ Sing your heart out!';
     clearInterval(timerInt);
@@ -119,25 +145,25 @@ async function startRec(){
     document.getElementById('recordBox').classList.remove('recording');
     document.getElementById('msg').innerHTML='🎤 <b>Microphone access is needed.</b><br><small>Use Allow Microphone above, then press Start Recording.</small>';
     btn.textContent='🎙️ Start Recording';
-    btn.style.background='linear-gradient(135deg,#7ed7c0,#9daef7)';
+    btn.style.background='linear-gradient(135deg,#dfeee6,#dfe7f8)';
     btn.onclick=startRec;
   }
 }
 
 function monitor(){data=new Float32Array(analyser.fftSize);analyser.getFloatTimeDomainData(data);raf=requestAnimationFrame(monitor)}
-function stopRec(){clearInterval(timerInt);cancelAnimationFrame(raf);if(recorder&&recorder.state!=="inactive")recorder.stop();if(stream)stream.getTracks().forEach(t=>t.stop());if(audioCtx)audioCtx.close()}
+function stopRec(){clearInterval(timerInt);cancelAnimationFrame(raf);if(recorder&&recorder.state!=="inactive")recorder.stop();if(stream)stream.getTracks().forEach(t=>t.stop());if(audioCtx)audioCtx.close();show('results');}
 function cancelRec(){clearInterval(timerInt);cancelAnimationFrame(raf);if(recorder&&recorder.state!=="inactive")recorder.stop();stream?.getTracks().forEach(t=>t.stop());show('home')}
 
 async function finish(){
   const blob=new Blob(chunks,{type:recorder.mimeType||'audio/webm'});document.getElementById('play').src=URL.createObjectURL(blob);
   const buf=await decode(blob); const metrics=analyze(buf); render(metrics); show('results');
 }
-async function decode(blob){const ac=new (window.AudioContext||window.webkitAudioContext)();const arr=await blob.arrayBuffer();const b=await ac.decodeAudioData(arr);const ch=b.getChannelData(0);const out=new Float32Array(ch.length);let peak=0;for(let i=0;i<ch.length;i++){const v=ch[i];out[i]=v;peak=Math.max(peak,Math.abs(v))}ac.close();return {x:out,sr:b.sampleRate,dur:b.duration};}
+async function decode(blob){const ac=new (window.AudioContext||window.webkitAudioContext)();const arr=await blob.arrayBuffer();const b=await ac.decodeAudioData(arr);const ch=b.getChannelData(0);const dur=b.duration;return {x:ch,sr:b.sampleRate,dur};}
 function analyze(a){
   const x=a.x,sr=a.sr; let frame=Math.floor(sr*.04), step=Math.floor(sr*.02), voiced=[], rms=[];
   for(let i=0;i+frame<x.length;i+=step){
-   let sum=0;for(let j=0;j<frame;j++){let v=x[i+j];sum+=v*v}let r=Math.sqrt(sum/frame);rms.push(r);
-   if(r>.018){let f=pitch(x,i,frame,sr);if(f>=75&&f<=1000)voiced.push(f)}
+    let sum=0;for(let j=0;j<frame;j++){let v=x[i+j];sum+=v*v}let r=Math.sqrt(sum/frame);rms.push(r);
+    if(r>.018){let f=pitch(x,i,frame,sr);if(f>=75&&f<=1000)voiced.push(f)}
   }
   const med=median(voiced), spread=voiced.length?Math.sqrt(voiced.reduce((s,f)=>s+(f-med)**2,0)/voiced.length):999;
   const active=rms.filter(v=>v>.018).length/(rms.length||1);
@@ -165,17 +191,15 @@ function render(m){
    ['🎶 Voice Judge',voice, voice>=75?'YES':'TRY AGAIN', voice>=75?'Your recording shows steady vocal sound and control.':'Work on steady airflow and a relaxed, even tone.'],
    ['❤️ Performance Judge',perf, perf>=75?'YES':'TRY AGAIN', perf>=75?'Your singing had good consistency and energy.':'Try singing with more confidence and expression.']
   ];
-  document.getElementById('judgesOut').innerHTML=arr.map(j=>`<div class="rj"><div><b>${j[0]}</b><div style="font-size:12px;color:#66607f">${j[3]}</div></div><span class="badge ${j[2]=='YES'?'yes':'no'}">${j[2]}</span></div>`).join('');
-  let tips=[]; if(pitch<80)tips.push(['🎯 Pitch Accuracy','Practice scales with a piano or another reference note.']); if(m.breathScore<80)tips.push(['🌬️ Breath Control','Take a low, relaxed breath and sustain notes evenly.']); if(perf<80)tips.push(['🎭 Performance','Sing with more confident phrasing and stronger emotional expression.']); if(!tips.length)tips.push(['✨ Great work','Your audition is balanced and steady.']);
+  document.getElementById('judgesOut').innerHTML=arr.map(j=>`<div class="rj"><div><b>${j[0]}</b><div style="font-size:12px;color:#66607f">${j[3]}</div></div><span class="badge ${j[2]=='YES'?'yes':'try'}">${j[2]}</span></div>`).join('');
+  let tips=[]; if(pitch<80)tips.push(['🎯 Pitch Accuracy','Practice scales with a piano or another reference note.']); if(m.breathScore<80)tips.push(['🌬️ Breath Control','Take a low, relaxed breath and keep it steady through the phrase.']); if(perf<80)tips.push(['✨ Stage Presence','Smile, keep your eyes up, and sing with more intention.']);
   document.getElementById('tips').innerHTML=tips.slice(0,3).map(t=>`<div class="tip"><b>${t[0]}</b><span>${t[1]}</span></div>`).join('');
 }
 
 function openSettings(){
-  document.getElementById('settingsModal').classList.remove('hidden');
   document.getElementById('settingsModal').style.display='flex';
 }
 function closeSettings(){
-  document.getElementById('settingsModal').classList.add('hidden');
   document.getElementById('settingsModal').style.display='none';
 }
 async function requestMicFromSettings(){
